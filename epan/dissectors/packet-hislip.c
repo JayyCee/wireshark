@@ -55,6 +55,12 @@
 #define HISLIP_ASYNCLOCKINFORESPONSE           25
 
 
+#define HISLIP_GETDESCRIPTORS                  26
+#define HISLIP_GETDESCRIPTORSRESPONSE          27
+#define HISLIP_STARTTLS                        28
+#define HISLIP_ASYNCSTARTTLS                   29
+#define HISLIP_ASYNCSTARTTLSRESPONSE           30
+
 
 static gint proto_hislip = -1;
 
@@ -162,7 +168,19 @@ static const range_string messagetypestring[] =
     { HISLIP_ASYNCDEVICECLEARACKNOWLEDGE    , HISLIP_ASYNCDEVICECLEARACKNOWLEDGE    , "AsyncDeviceClearAcknowledge" },
     { HISLIP_ASYNCLOCKINFO                  , HISLIP_ASYNCLOCKINFO                  , "AsyncLockInfo" },
     { HISLIP_ASYNCLOCKINFORESPONSE          , HISLIP_ASYNCLOCKINFORESPONSE          , "AsyncLockInfoResponse" },
-    { 26                                    , 127                                   , "reserved for future use"},
+
+
+
+    { HISLIP_GETDESCRIPTORS            , HISLIP_GETDESCRIPTORS            , "GetDescriptors" },
+    { HISLIP_GETDESCRIPTORSRESPONSE    , HISLIP_GETDESCRIPTORSRESPONSE    , "GetDescriptorsResponse" },
+    { HISLIP_STARTTLS                  , HISLIP_STARTTLS                  , "StartTLS" },
+    { HISLIP_ASYNCSTARTTLS             , HISLIP_ASYNCSTARTTLS             , "AsyncStartTLS" },
+    { HISLIP_ASYNCSTARTTLSRESPONSE             , HISLIP_ASYNCSTARTTLSRESPONSE             , "AsyncStartTLSResponse" },
+
+
+
+
+    { 31                                    , 127                                   , "reserved for future use"},
     {128                                    , 255                                   , "VendorSpecific" },
     {  0                                    ,   0                                   , NULL }
 };
